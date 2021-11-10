@@ -2,22 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>in.javahome</groupId>
-	<artifactId>my-app-docker-pipeline</artifactId>
+	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.5</version>
-	<name>my-app-docker-pipeline</name>
+	<version>8.3.2</version>
+	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
-	<configuration>
-        	<failOnMissingWebXml>false</failOnMissingWebXml>
-            </configuration>
-
+	
+	<properties>
+		<docker.image.prefix>kammana</docker.image.prefix>
+	</properties>	
 	<dependencies>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<!-- <scope>provided</scope> -->
+		    <groupId>com.oracle.bedrock</groupId>
+		    <artifactId>bedrock-runtime-maven</artifactId>
+		    <version>5.1.2</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -25,9 +25,27 @@
 			<scope>test</scope>
 		</dependency>
 
-
-
 	</dependencies>
+	
+	<distributionManagement>
+		 <snapshotRepository>
+		    <id>nexusRepo</id>
+		    <url>http://13.233.230.166:8081/repository/maven-snapshots/</url>
+		 </snapshotRepository>
+		
+		<repository>
+		    <id>nexusRepo</id>
+		    <url>http://13.233.230.166:8081/repository/maven-releases/</url>
+		</repository>
+  	</distributionManagement>
+	
+	<pluginRepositories>
+	    <pluginRepository>    
+		<id>maven1</id>
+		<name>Maven.org</name>
+		<url>http://repo1.maven.org/maven2</url>
+	    </pluginRepository>
+	</pluginRepositories>
 
 	
 </project>
