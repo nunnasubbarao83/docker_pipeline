@@ -3,6 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>in.javahome</groupId>
 	<artifactId>my-app-docker-pipeline</artifactId>
+	<failOnMissingWebXml>false</failOnMissingWebXml>
 	<packaging>war</packaging>
 	<version>0.0.5</version>
 	<name>my-app-docker-pipeline</name>
