@@ -21,11 +21,7 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-	
 
-	</dependencies>
-
-    <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
@@ -34,6 +30,8 @@
                 <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
         </plugin>
-    </plugins>
+
+	</dependencies>
+
 	
 </project>
