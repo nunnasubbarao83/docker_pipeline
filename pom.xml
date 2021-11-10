@@ -7,6 +7,9 @@
 	<version>0.0.5</version>
 	<name>my-app-docker-pipeline</name>
 	<url>http://maven.apache.org</url>
+	<configuration>
+        	<failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
 
 	<dependencies>
 		<dependency>
@@ -22,14 +25,7 @@
 			<scope>test</scope>
 		</dependency>
 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>2.4</version>
-            <configuration>
-                <failOnMissingWebXml>false</failOnMissingWebXml>
-            </configuration>
-        </plugin>
+
 
 	</dependencies>
 
